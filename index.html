@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Декоративні рослини</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20231220214856">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+	<div class="product_registration">
+		<div class="product_registration__section __container">
+			<h1 class="product_registration__title title">Оформлення замовлення</h1>
+			<div class="product_registration__cart">
+			</div>
+			<form required method="post" action="sendmail.php" enctype="multipart/form-data" class="product_registration__forms">
+				<label for="" class="product_registration_content">
+					<textarea name="registration_content" id="" cols="30" rows="10"></textarea>
+				</label>
+				<label for=""><span class="product_register__label-title">Ім'я</span>
+					<input required type="text" name="name" placeholder="Ім'я">
+				</label>
+				<label for=""><span class="product_register__label-title">Номер</span>
+					<input required type="number" name="phone" placeholder="380">
+				</label>
+				<label for="">
+					<span class="product_register__label-title">Адреса доставки</span>
+					<input required type="text" name="address" placeholder="Область/Місто">
+				</label>
+				<div class="product_registration__delivery">
+					<span class="product_register__label-title">Оберіть пошту</span>
+					<label><input required type="radio" name="delivery" value="Nova Poshta" /><span>Нова Пошта</span></label>
+					<label><input required type="radio" name="delivery" value="Ukr Poshta" /><span>Укр. Пошта</span></label>
+				</div>
+				<label for="">
+					<span class="product_register__label-title">Поштове відділення</span>
+					<input type="text" placeholder="№" class="product_registration_delivery__department" name="department">
+				</label>
+				<label for="">
+					<span class="product_register__label-title">Коментар до замовлення</span>
+					<textarea type="text" name="message" placeholder="Ваш коментар"></textarea>
+				</label>
+				<label for="" class="product_price_value">
+					<input required type="text" class="product_price_input" name="price" id="">
+				</label>
+				<span class="product_price_value_title">Price</span>
+				<div class="product_registration_btn_section"><button type="submit">Замовити</button>
+					<span class="product_registration_btn_close">Закрити</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="cart__backdrop">
+		<div class="cart__body">
+			<div class="cart">
+			</div>
+
+			<div class="cart__price">
+				<h2>Вартість: </h2><span class="price__value"></span>грн
+			</div>
+			<div class="cart__order">
+				<div class="btn_to_order">Оформити замовлення</div>
+			</div>
+		</div>
+	</div>
+	<div class="mail-message-result">
+		<div class="message-items __container">
+			<span>Сервер не працює. Ваше повідомлення не відправлене</span>
+			<span>1</span>
+			<span>2</span>
+			<span>3</span>
+			<span>4</span>
+			<button class="mail-message-result-close-btn">Закрити</button>
+
+		</div>
+	</div>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="header__logo">
+					<span class="_icon-logo"></span>
+				</div>
+				<div class="header__menu">
+					<div class="menu__body">
+						<div class="menu__item">
+							<a href="#" data-goto-header data-goto="#catalog-section" class="menu__link">Каталог товарів</a>
+						</div>
+						<div class="menu__item">
+							<a href="#" class="menu__link">Догляд за рослинами</a>
+						</div>
+						<div class="menu__item">
+							<a href="#" class="menu__link">Оплата/доставка</a>
+						</div>
+						<div class="menu__item">
+							<a href="#" data-goto-header data-goto="#contacts-section" class="menu__link">Контакти</a>
+						</div>
+					</div>
+				</div>
+				<div class="header__btn">
+
+					<a href="#" class="header__btn_icons">
+
+						<span class="icons _icon-search"></span>
+
+					</a>
+					<a href="#" class="header__btn_icons">
+
+						<span class="icons _icon-user"></span>
+
+					</a>
+					<span class="header__btn_icons">
+
+						<div id="header_cart" class="header_cart_section icons _icon-cart">
+							<div class="cart-items-value fav">
+
+							</div>
+
+						</div>
+
+					</span>
+					<span class="icon-menu"></span>
+
+				</div>
+
+			</div>
+
+
+
+
+		</header>
+		<main class="page">
+
+			<!-- heder slider -->
+			<section class="page__plant_slider">
+				<div class="plant_slider__body swiper">
+					<div class="plant_slider__wrapper swiper-wrapper">
+						<div class="plant_slider__slide swiper-slide">
+							<picture><source srcset="img/slider-bg.webp" type="image/webp"><img src="img/slider-bg.jpg" alt=""></picture>
+							<div class="plant_slide__info-block __container">
+								<div class="info-block__title">Фітолампи: огляд популярних моделей</div>
+								<p class="info-block__text">Осінь скоротила світловий день, і рослинам на підвіконні, яким і так дістається замало світла в квартирі чи будинку,
+									стає дедалі сумніше. Тож для деяких рослин доводиться використовувати фітолампи і постає вибір – яку саме купити. У цій
+									статті пропонуємо огляд фітоламп, які ми пропонуємо і якими користуємося самі, аби рослинки дісталися до споживачів
+									здоровими і щасливими.</p>
+								<a href="#" class="info-block__btn">Дізнатись більше</a>
+							</div>
+
+						</div>
+						<div class="plant_slider__slide swiper-slide">
+							<picture><source srcset="img/slider-bg2.webp" type="image/webp"><img src="img/slider-bg2.jpg" alt=""></picture>
+							<div class="plant_slide__info-block __container">
+								<div class="info-block__title">Найкраще добриво для кімнатних рослин – як вибрати</div>
+								<p class="info-block__text">Чи існує найкраще добриво для кімнатних рослин? Розчаруємо: одного конкретного не існує. Адже різні рослини мають різні
+									вимоги до поживних речовин. Більше того, їхні потреби можуть змінюватися залежно від віку рослини, сезону.</p>
+								<a href="#" class="info-block__btn">Дізнатись більше</a>
+							</div>
+
+						</div>
+						<div class="plant_slider__slide swiper-slide">
+							<picture><source srcset="img/slider-bg3.webp" type="image/webp"><img src="img/slider-bg3.jpg" alt=""></picture>
+							<div class="plant_slide__info-block __container">
+								<div class="info-block__title">Мандаринове дерево – як виростити і доглядати</div>
+								<p class="info-block__text">Попри вибагливість культури, в кліматичних умовах України виростити мандаринове дерево доволі легко, але добре себе
+									почуватиме і плодоноситиме рослина лише у теплиці або вдома. З цієї статті ви дізнаєтеся, як доглядати за мандарином, як
+									його вирощувати, щоб незабаром з невеличкого паростка виріс пишний ошатний кущ з ароматними плодами.</p>
+								<a href="#" class="info-block__btn">Дізнатись більше</a>
+
+							</div>
+
+						</div>
+
+					</div>
+
+
+					<div class="swiper-pagination">
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+					<!-- <div class="swiper-novigation">
+								<button type="button" class="plant_slider_arrow _icon-arrow swiper-button-prev"></button>
+								<button type="button" class="plant_slider_arrow _icon-arrow swiper-button-next"></button>
+							</div> -->
+
+
+
+				</div>
+
+			</section>
+
+			<!-- нова продукція -->
+			<section class="page__products">
+				<div class="production__container">
+					<div class="production__signature signature">
+						АКЦІЇ / ПОПУЛЯРНІ ТОВАРИ
+					</div>
+					<div class="production__title title">
+						Нова продукція
+					</div>
+					<!-- Оболонка слайдера -->
+					<div class="page-new-production__slider swiper">
+						<!-- Частина слайдера, що рухається -->
+						<div class="page-new-production__wrapper swiper-wrapper">
+							<!-- Слайд -->
+							<!-- <div class="page-new-production__slide swiper-slide">1</div> -->
+						</div>
+					</div>
+					<!-- Якщо потрібна навігація (ліворуч/праворуч) -->
+					<div class="page-new-production__navigation-block">
+						<button type="button" class="page-new-production__navigation swiper-button-prev"><span class="_icon-arrow"></span></button>
+						<button type="button" class="page-new-production__navigation swiper-button-next"><span class="_icon-arrow"></span></button>
+					</div>
+				</div>
+
+
+
+
+
+			</section>
+			<section class="page__img-box">
+				<picture><source srcset="img/slider-bg4.webp" type="image/webp"><img src="img/slider-bg4.jpg" alt=""></picture>
+			</section>
+			<section class="page__catalog">
+				<div class="catalog__container">
+					<div class="catalog__signature signature">
+						НАШ МАГАЗИН
+					</div>
+					<div class="catalog__title title">
+						Каталог рослин
+					</div>
+					<nav class="catalog__nav" id="catalog-section">
+						<fieldset class="catalog-nav__body">
+							<div class="catalog-nav__item">
+								<label class="catalog-nav-input-label catalog-nav__link">Філодендрон
+									<input type="radio" name="catalog-tabs-name" id="" value="Philodendron"></label>
+							</div>
+							<div class="catalog-nav__item">
+								<label class="catalog-nav-input-label catalog-nav__link">Scindapsus
+									<input type="radio" name="catalog-tabs-name" id="" value="Scindapsus">
+
+								</label>
+							</div>
+							<div class="catalog-nav__item">
+								<label class="catalog-nav-input-label catalog-nav__link">Monstera
+									<input type="radio" name="catalog-tabs-name" id="" value="Monstera"></label>
+							</div>
+							<div class="catalog-nav__item">
+								<label class="catalog-nav-input-label catalog-nav__link">Caladium
+									<input type="radio" name="catalog-tabs-name" id="" value="Caladium"></label>
+							</div>
+							<div class="catalog-nav__item">
+								<label class="catalog-nav-input-label catalog-nav__link">Epipremnum
+									<input type="radio" name="catalog-tabs-name" id="" value="Epipremnum"></label>
+							</div>
+						</fieldset>
+
+
+					</nav>
+					<!-- Місце де відворюються катки -->
+					<div class="catalog-prodution cards__section">
+
+					</div>
+
+				</div>
+
+
+			</section>
+			<section class="send-mail __container" id="contacts-section">
+				<div class="send-mail__signature signature">Контакти</div>
+				<div class="send-mail__title title">Написати нам</div>
+				<div class="send-mail__img">
+					<picture><source srcset="img/atom.webp" type="image/webp"><img src="img/atom.webp" alt=""></picture>
+				</div>
+				<div class="send-mail__form-section">
+					<div class="send-mail__form">
+						<!--action="#" method="POST" action="components/sendmail/sendmail.php" enctype="multipart/form-data"-->
+						<label for="">Ваше ім'я:</label>
+						<input type="text" name="name" class="user-name" value="" placeholder="Ваше ім'я">
+						<label for="">Телефон:</label>
+						<input type="number" name="number" class="user-phone" value="" placeholder="Номер телефону">
+						<label for="">Емейл:</label>
+						<input type="email" name="email" class="user-email" value="" id="" placeholder="Ваша електронна пошта">
+						<label for="">Повідомлення:</label>
+						<textarea name="message" class="user-message" value="" id=""></textarea>
+						<button class="send-btn">Відправити</button>
+					</div>
+				</div>
+			</section>
+
+			<section>
+
+			</section>
+			<!-- для пошуку по рослиних -->
+			<!-- <div class="input__section">
+													<input class="input__text" type="text" id="textinput" value=""/>
+													<input class="input__btn" type="button" value="Search" />
+													<div class="input__timer-line"></div>
+												</div> -->
+			<!-- <div class="cards__section"> -->
+			<!-- <div class="card__body">
+														<div class="card">
+															<div class="card__img">
+																<picture><source srcset="img/no-img.webp" type="image/webp"><img src="img/no-img.jpg" alt="" /></picture>
+															</div>
+															<div class="card__title title">title</div>
+															<div class="card__info info">info</div>
+															<div class="card__tag tag">tag</div>
+															<a href="" class="card__btn btn" >btn</a>
+														</div>
+													</div> -->
+			<!-- </div> -->
+
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__logo">
+					<span class="_icon-logo"></span>
+				</div>
+				<div class="footer__list-link">
+					<a href="#">Допомога</a>
+					<a href="#">Способи оплати</a>
+				</div>
+				<div class="footer__social">
+					<a href="#" class="icons _icon-facebook"></a>
+					<a href="#" class="icons _icon-instagram"></a>
+					<a href="#" class="icons _icon-twitter"></a>
+
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20231220214856"></script>
+</body>
+<script>
+	// Масив з об"єктами
+
+	// searchPlant(plantsArr, "philodendron");
+
+	// таймер відліку
+</script>
+
+</html>
